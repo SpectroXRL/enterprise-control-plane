@@ -34,7 +34,7 @@ export function SidePanel() {
 
     (async () => {
       const session = await meet.addon.createAddonSession({
-        cloudProjectNumber: "CLOUD_PROJECT_NUMBER",
+        cloudProjectNumber: CLOUD_PROJECT_NUMBER,
       });
 
       const client = await session.createSidePanelClient();

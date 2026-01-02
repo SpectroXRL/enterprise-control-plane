@@ -1,10 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import { SidePanel } from "./components/SidePanel.tsx";
+import MainStage from "./MainStage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <SidePanel />
+    <MainStage />
   </StrictMode>
 );
