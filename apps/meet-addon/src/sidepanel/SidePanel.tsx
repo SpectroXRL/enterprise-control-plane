@@ -5,8 +5,9 @@ import {
 } from "@googleworkspace/meet-addons/meet.addons";
 
 const CLOUD_PROJECT_NUMBER = import.meta.env.VITE_MEET_CLOUD_PROJECT_NUMBER;
+const MAIN_STAGE_URL = import.meta.env.VITE_MAIN_STAGE_URL;
 
-if (!CLOUD_PROJECT_NUMBER) {
+if (!CLOUD_PROJECT_NUMBER || !MAIN_STAGE_URL) {
   throw new Error(
     "Missing VITE_MEET_CLOUD_PROJECT_NUMBER environment variable"
   );
@@ -24,7 +25,7 @@ export function SidePanel() {
     }
 
     await sidePanelClient.startActivity({
-      mainStageUrl: "MAIN_STAGE_URL",
+      mainStageUrl: MAIN_STAGE_URL,
     });
   };
 
